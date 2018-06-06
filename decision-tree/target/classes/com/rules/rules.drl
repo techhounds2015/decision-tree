@@ -1,0 +1,16 @@
+package com.rules
+
+import com.puresoftware.model.ARC
+
+rule "ARC Location for Noida"
+	when 
+		arcObject: ARC(type=="Noida")
+	then
+		arcObject.setArcLocation("Noida")
+	end
+rule "ARC Location for GZ"
+	when 
+		arcObject: ARC(type=="GZ")
+	then
+		arcObject.setArcLocation("GZ");
+	end
